@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BaseWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Friend.cs" />
     <Compile Include="ViewModes\TimVm.cs" />

@@ -19,6 +19,8 @@ namespace KeLi.TimImitater.ViewModes
 
         public TimVm()
         {
+            throw new Exception("dd");
+
             Friends = new ObservableCollection<Friend>
             {
                 new Friend { Nickname = "Devil", Head = new BitmapImage(new Uri("pack://application:,,,/Resources/head1.jpg")) },
@@ -35,10 +37,11 @@ namespace KeLi.TimImitater.ViewModes
             {
                 if (p is ListView lv)
                 {
-                    var friend = lv.SelectedItem as Friend;
-
-                    Head = friend.Head;
-                    NickName = friend.Nickname;
+                    if (lv.SelectedItem is Friend friend)
+                    {
+                        Head = friend.Head;
+                        NickName = friend.Nickname;
+                    }
                 }
             });
         }
