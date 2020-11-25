@@ -33,13 +33,13 @@ namespace KeLi.TimImitater.ViewModes
 
             SelectItemChangedCommand = new DelegateCommand<object>(p =>
             {
-                if (p is ListView lv)
+                if (!(p is ListView lv))
+                    return;
+
+                if (lv.SelectedItem is Friend friend)
                 {
-                    if (lv.SelectedItem is Friend friend)
-                    {
-                        Head = friend.Head;
-                        NickName = friend.Nickname;
-                    }
+                    Head = friend.Head;
+                    NickName = friend.Nickname;
                 }
             });
         }
