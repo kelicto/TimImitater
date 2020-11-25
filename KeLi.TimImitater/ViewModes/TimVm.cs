@@ -19,8 +19,6 @@ namespace KeLi.TimImitater.ViewModes
 
         public TimVm()
         {
-            throw new Exception("dd");
-
             Friends = new ObservableCollection<Friend>
             {
                 new Friend { Nickname = "Devil", Head = new BitmapImage(new Uri("pack://application:,,,/Resources/head1.jpg")) },
