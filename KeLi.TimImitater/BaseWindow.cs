@@ -33,18 +33,23 @@ namespace KeLi.TimImitater
                 ShowUnhandledException(args.Exception, "Dispatcher.UnhandledException", true);
             };
 
-            // Catchs exceptions from the main UI dispatcher thread.
-            // Typically we only need to catch this OR the Dispatcher.UnhandledException.
-            // Handling both can result in the exception getting handled twice.
-            Application.Current.DispatcherUnhandledException += (sender, args) =>
-            {
-                // If we are debugging, let Visual Studio handle the exception and take us to the code that threw it.
-                if (!Debugger.IsAttached)
-                    return;
+            var application = Application.Current;
 
-                args.Handled = true;
-                ShowUnhandledException(args.Exception, "Application.Current.DispatcherUnhandledException", true);
-            };
+            if (application != null)
+            {
+                // Catchs exceptions from the main UI dispatcher thread.
+                // Typically we only need to catch this OR the Dispatcher.UnhandledException.
+                // Handling both can result in the exception getting handled twice.
+                application.DispatcherUnhandledException += (sender, args) =>
+                {
+                    // If we are debugging, let Visual Studio handle the exception and take us to the code that threw it.
+                    if (!Debugger.IsAttached)
+                        return;
+
+                    args.Handled = true;
+                    ShowUnhandledException(args.Exception, "Application.Current.DispatcherUnhandledException", true);
+                };
+            }
         }
 
         private void ShowUnhandledException(Exception exception, string exceptionType, bool promptUserForShutdown)
