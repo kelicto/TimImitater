@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-using KeLi.TimImitater.ViewModes;
+using KeLi.TimImitater.ViewModels;
 
 namespace KeLi.TimImitater.Views
 {

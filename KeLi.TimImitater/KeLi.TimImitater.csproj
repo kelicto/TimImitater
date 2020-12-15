@@ -78,7 +78,7 @@
     <Compile Include="BaseWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Friend.cs" />
-    <Compile Include="ViewModes\TimVm.cs" />
+    <Compile Include="ViewModels\TimVm.cs" />
     <Page Include="Views\TimWnd.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -9,7 +9,7 @@ using KeLi.TimImitater.Models;
 using Prism.Commands;
 using Prism.Mvvm;
 
-namespace KeLi.TimImitater.ViewModes
+namespace KeLi.TimImitater.ViewModels
 {
     internal class TimVm : BindableBase
     {
