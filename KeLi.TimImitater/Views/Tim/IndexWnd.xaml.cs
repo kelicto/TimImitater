@@ -1,10 +1,11 @@
 ﻿using System.Windows.Input;
 
+using KeLi.TimImitater.Models;
 using KeLi.TimImitater.ViewModels;
 
 namespace KeLi.TimImitater.Views.Tim
 {
-    public partial class IndexWnd
+    public partial class IndexWnd : BaseWindow
     {
         public IndexWnd()
         {

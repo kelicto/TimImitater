@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace KeLi.TimImitater
+namespace KeLi.TimImitater.Models
 {
     public class BaseWindow : Window
     {
