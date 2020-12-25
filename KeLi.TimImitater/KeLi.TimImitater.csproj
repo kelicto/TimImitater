@@ -79,7 +79,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Friend.cs" />
     <Compile Include="ViewModels\TimVm.cs" />
-    <Page Include="Views\TimWnd.xaml">
+    <Page Include="Views\Tim\IndexWnd.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -87,8 +87,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\TimWnd.xaml.cs">
-      <DependentUpon>TimWnd.xaml</DependentUpon>
+    <Compile Include="Views\Tim\IndexWnd.xaml.cs">
+      <DependentUpon>IndexWnd.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -2,11 +2,11 @@
 
 using KeLi.TimImitater.ViewModels;
 
-namespace KeLi.TimImitater.Views
+namespace KeLi.TimImitater.Views.Tim
 {
-    public partial class TimWnd
+    public partial class IndexWnd
     {
-        public TimWnd()
+        public IndexWnd()
         {
             InitializeComponent();
             DataContext = new TimVm();

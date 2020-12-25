@@ -29,9 +29,9 @@ namespace KeLi.TimImitater.ViewModels
                 new Friend { Nickname = "Dog", Head = new BitmapImage(new Uri("pack://application:,,,/Resources/head6.jpg")) }
             };
 
-            CloseCommand = new DelegateCommand(() => { Application.Current.Shutdown(); });
+            CloseCmd = new DelegateCommand(() => { Application.Current.Shutdown(); });
 
-            SelectItemChangedCommand = new DelegateCommand<object>(p =>
+            SelectItemChangedCmd = new DelegateCommand<object>(p =>
             {
                 if (!(p is ListView lv))
                     return;
@@ -44,9 +44,9 @@ namespace KeLi.TimImitater.ViewModels
             });
         }
 
-        public DelegateCommand<object> SelectItemChangedCommand { get; set; }
+        public DelegateCommand<object> SelectItemChangedCmd { get; set; }
 
-        public DelegateCommand CloseCommand { get; set; }
+        public DelegateCommand CloseCmd { get; set; }
 
         public ObservableCollection<Friend> Friends { get; set; }
 
